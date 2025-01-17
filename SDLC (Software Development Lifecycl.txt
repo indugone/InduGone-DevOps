@@ -1,0 +1,206 @@
+SDLC (Software Development Lifecycle) 
+
+It is a process used by the software industry to design, develop and to test. 
+
+The main goal is to release the quality product to the customer. 
+
+SDLC Flow Chart: 
+
+         Requirement Gathering and planning 
+
+            Planning (Design/Architect) 
+
+            Coding (implementation /development) 
+
+                 Testing 
+
+                Deployment/delivery/release 
+
+                Feedback/Maintenance/Monitoring 
+planning: defining the scope and purpose of the application
+Requirement analysis: gathering and documenting specific requirements
+design: creating the software architecture
+Implementation:/coding: writing the actual code
+testing : systematically discovering and fixing errors in the software
+deployment: releasing the software to users
+maintainance: addressing issues and updating the software post release
+
+
+: Two models in SDLC: - 
+
+Waterfall model 
+
+Agile model 
+
+Definition of waterfall model: The Waterfall Model is a traditional and linear approach to software development, where progress is seen as flowing steadily downwards (like a waterfall) through distinct phases. It is one of the earliest models used in software engineering and follows a sequential design process. 
+
+Drawbacks of waterfall models: 
+
+After completion of the first phase. We must go to another phase it is difficult and costly to go back and make the changes. 
+
+Long delivery time 
+
+Poor for complex and large projects, where changes are in high frequency. 
+
+Risk of communication 
+
+Assumption of complete Requirements  
+
+*   In order to address these issues are limitations have next model is Agile methodology. 
+
+Agile model: The Agile Model is an iterative and flexible approach to software development that emphasizes collaboration, customer feedback, and small, incremental improvements. Unlike the traditional Waterfall Model, which follows a linear and sequential process, the Agile Model focuses on delivering software in small, functional segments, with regular adjustments based on feedback and changing requirements. 
+
+The main goal of MVP is to reduce the functional product quickly. 
+
+Agile methodology flow chart:                                   
+ 
+
+Limitation for Agile Methodology: 
+
+                             Dev Team                  Ops Team 
+
+                            wants changes            wants stability
+
+    
+
+Ex: - Platform Dependency 
+
+          Environmental Dependency 
+
+  
+
+    File-1.0 version 
+
+      Configuration 
+
+       Java1.8 version 
+
+        Tomcat-9 
+
+         Maven-4 
+
+If we update the versions, it will not deploy the server. 
+
+File 2.0 version 
+
+ 
+
+To address the issues of limitations we have the next model is devOps. 
+
+ 
+
+DevOps: - The combination of developers and operations is called devOps. 
+
+ : Development without devops culture: 
+
+Release and deploy mismatches. 
+
+Unpredictable issues. 
+
+Blame games. 
+
+        Development with Devops culture: 
+
+Streamlined deliveries 
+
+Teamwork in collaboration 
+
+Continuous monitoring and feedback 
+
+What Exactly in DevOps in Real-life: - 
+
+Plan 
+
+Code  
+
+Build 
+
+Test 
+
+Release 
+
+Deploy 
+
+Operations 
+
+Monitor 
+
+DevOps what DevOps is not: 
+
+Devops is not a role, person or organization. 
+
+Devops is not a separate team. 
+
+Devops is not a product or tool. 
+
+Devops is not about just writing scripts or implementing the tools. 
+
+What is Devops: Devops is a practice that allows a single team to manage the entire development life cycle that is development testing, deployment and monitoring. 
+
+                           Code Shape Production 
+
+: What Devops Do? 
+
+1.Integrates developers and operations team. 
+
+2.Improves collaboration and productivity by automating the infrastructure automating the workflows continuously measuring application performances. 
+
+: Skills of a devops engineer: - 
+
+Tools: - Version control system 
+
+Continuous integration – Jenkins 
+
+Containerization/virtualization - Docker 
+
+ Configuration management –Ansible 
+
+ Monitoring – Grafana & Prometheus 
+
+Networking skills: - 
+
+*General networking skills establishing connection between the containers or container orchestration. 
+
+*Other skills: people skills, process skills, customer skills and empathy. 
+
+*Devops  life cycle: - 
+
+1.Plan: - first stage of devops cycle where you can plan, track, visualize and summarize your project before starting it. 
+
+Ex: - Jira, Trello 
+
+2.Code: - second stage of devops cycle, where       the developers write the code. 
+
+Ex: -Git, Git hub, Bit bucket, Git lab 
+
+3.Build: - Build is prerelease version and is defined by build number, rather than by release number  
+
+Ex: - Apache maven 
+
+ 4.Test: - Process of executing automated test as A part of the software delivery pipeline in order Obtain feedback on the business risks. Associated with a software release as rapidly as Possible. 
+
+Ex: -JMeter, selenium, JUnit 
+
+                                                     
+
+ 5.Release: This phase helps to integrate code into a shade repository using which you can detect and locate errors quickly and easily. 
+
+ Ex: - Bamboo, Gitlab, Travis CT  
+
+ 6.Deploy: -Manage and maintain development and deployment of software systems and servers in any computational (any cloud) 
+
+Environment. 
+
+Ex: -ansible, Aws, chef 
+
+7.Operations: This phase is to keep the system upgraded with the latest update.   
+
+Ex: - ansible, chef, Aws 
+
+8.Monitorizing: - It ensures that the application is performing as desired, and the environment is stable then it quickly determines when a service is unavailable and understands the underlying causes. (any issues)      
+
+Ex:- prometheus, grafana, splunk, nagios, sensu            
+
+ 
+
+ 

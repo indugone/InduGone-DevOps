@@ -1,0 +1,77 @@
+How will you change the default BRANCH NAME:-
+   The default branch is considered as the "base" branch in your repository aganist which all pull requests and code commits are automatically made unless you specify a different branch.
+* HOW TO DELETE THE REPOSITORY?
+once you delete a repository, there is no going back please be certain.
+HOW WE INVITE COLLABRATERS USERS INTO GITHUB REPOSITORY?
+General setting -----Access-----collaborators
+*git command:
+first we have clone and next manipulate and next going to working area and add to the staging area and commit to the local repository and next push to the remote repository
+*git clone
+*pwd
+*touch file
+*git add
+*git status
+*git commit
+*to add the data
+Vi,VIM,NANO [i-insert, click escape , q-without save the data,wq -will save and quit]
+
+*gitlog :commit -id
+         author
+         commit -m
+         date time
+command for configuration:
+   * git config --global user-email
+   * git config --global user-name "your name"
+
+__ command to create the new branch is
+   * git branch "branch name"
+__command to lists the branch in our remote repository.
+   * git branch
+HOW TO SWITCH ONE BRANCH TO ANOTHER BRANCH:
+*git switch "branch name"
+   or
+git checkout "branch name"
+__ Fatal: The current branch dev has no upstream branch. To push the current branch an set the remote as upstream use.
+ git push --set-upstream origin dev
+when we use these command it creates a branch name and when we refresh it, it shows in the remote repository.
+* to delete the branch
+* git branch -d "branch name"
+* we have deleted a branch in local how that will get reflect in remote repository
+** cat >file2.txt (to add the data)
+**cat file2.txt(to show the data)
+**gitstash - stash the changes in a dirty working directory aaway
+PURPOSE FOR GIT STASH:
+git stash show
+git stash list
+git stash pop (to resume the work)
+*How to push the folder from local repository to remote repository
+- git status
+- git add
+- git commit 
+- git push
+If we have to create folder in the file
+*pwd
+*ls
+*cd "foldername" to change the directory
+*touch filename
+*git add 
+*git commit
+*git push
+GIT RESTORE:
+*restore specified path in the working tree with some contents from a restore source. If a path is tracked but does not exist in the restore source.It will be removed to match the source.(staging area to working area)
+**git restore --staged<file>
+**git revert:
+git revert :command
+__ Given one or more existing commits, revert the changes that the related patches introduce and record them this requires your working tree to be clean(no modifications from the head commit)
+Fork: a fork is a copy of a repository forking a repository allows you to freely experiment with changes without affecting the original project.
+* only we can fork when it is in public .
+Merge: joint two or more development histories together
+* when we do the pull, once we done with development 
+* incorporates changes from the named commits (since the time their histories diverged from the current branch) into the current branch. This command is used by git pull to incorporate changes from another repository and can  be used by hand to merge changes from one branch into another (main/master are base branch)
+command: git merge filename
+pull request(pr):when merging pull requests you can allow any combination of merge commits, squashing or rebasing. At least one option must be enabled if you have linear history requirement enabled on any protected branch you must enable squashing or rebasing. 
+squash: combine all commits from the head branch into a single commit in the base branch
+git commit -am : is used to add and commit both at a same time it applicable only for existing ones.
+
+
+ 

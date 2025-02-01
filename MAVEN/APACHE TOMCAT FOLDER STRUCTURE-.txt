@@ -1,0 +1,42 @@
+APACHE TOMCAT FOLDER STRUCTURE:-
+==============================
+
+
+*BIN(Binary) (To start and stop the tomcat server)
+*Configuration (Artifacts/Deployable/Packages)
+*Logs (Apache tomcat and also application which is running inside tomcat)
+*Webapps(where we can hosting of the application )
+*Lib(Libraries)In Apache Tomcat, the lib directory is where libraries (JAR files) are stored that are used by Tomcat itself or by web applications running on Tomcat. 
+*Temporary (In Apache Tomcat, the temp directory is used to store temporary files that are generated or needed during the runtime of the server.)
+
+
+HOW TO ACCESS THE APPLICATION?
+
+Url (127.0.0.0.1:8080 (or)localhost:8080)
+
+where "aja" is artifact name
+
+
+*mvn archetype:generate-DgroupId-com.example.aja-DartifactId-aja-DarchetypeArctifactId-maven-archetype-webapp-DinteracticveMode=false.
+(to get the project)
+
+
+*HOW WE CAN PLACE THE ARTIFACT FROM MAVEN PROJECT OF TARGET FLODER TO APCACHE TOMCATS WEBAPPS FOLDERS:
+
+cp<pathwhereartifact><pathwherewebapps of tomcat>
+cp<source><desticnation>
+<destination>cp/<source>
+
+*configuration changes we have to restart the server when we changes the configuration in that case we have to go to tomcat server.
+*to change the port number of apache tomcat we should stop the server after the changing the port number then change the default port number then we have to start.
+*ctrl c/x to use the terminal of apache tomcat
+*TO DEPLOY THE APPLICATION ANOTHER WAY BY USING TOMCAT GUI (GRAPHICAL USER INTERFACE)
+*Acess the url of tomcat then serach for war file to deploy then click on choose file button it will open dialogue box in we need to select artifact and click on open file then we need to click  on deploy
+*HOW CAN WE ACCESS THE APACHE TOMCAT GUI?
+-First we need to go to apache tomcat folder then conf need to modify the "tomcat-user.xml"(using text  aditor eg:-vi) vi tomcat-user.xml and go to <user username -"admin"
+*How will you do uncomment by using those lines --"<!--"& "-->"
+
+--> Once you modify the tomcatusers.xml, we need to save and quit.
+
+--> tail -10
+--> Head -10

@@ -20,6 +20,7 @@ Folder structure of Wildfly:-
 ->Docs
 ->Bin
 ->Appclient
+->standalone
 
 How can we start Wildfly ?
 Go to Home folder of wildfly then go to bin 

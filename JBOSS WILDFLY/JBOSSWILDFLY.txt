@@ -1,58 +1,64 @@
-JBOSS WILDFLY -WEB SERVER
-=========================
+*CONFIGURATION CHANGES:
+=====================
 
-* It is used to deploy the java based application.
+Thing to keep in mind before changing configurational changes.
+1.where to change
+2.Backup
+3.How to change
+4.try on experiment local environment
+5.Documentation
 
-*WHAT IS JBOSS?
-===============
-JBOSS is a powerful open source java application server developed by RedHot.
+SNAPSHOT/BACKUP
+==============
+for wildfly-configuration sanpshot
 
+--->Home folder of wildfly -->standalone-configuration-standalone_xml_history
+filename: standalone v1
+Ex: port number change 
+Standalone-port change v3
 
----Wildfly.org/downloads-v.35
-* port numbers of wildfly
-*Admin -9990
-*Application/Artifacts -8080
+need to rename the original or existed file and then replace the customized as per requirement/change
 
-Admin :<url:9990>
-<url:8080>/<application-name>
+==Different status type of artifacts in deployment in wildfly.
+==In wildfly deployed artifacts can have various status states including 
 
-FOLDER STRUCTURE OF THE WILDFLY:
-==============================
+DEPLOYED:- The application successfully running on the wildfly server and accessible to users.
+UNDEPLOYED:-The application has been removed from the server and is not application is not running.
+FAILED:-The deployment process encountered an error and the application is not running.
+DISABLED:-The application is intentionally stopped by the administrator and cannot be accessed until enabled.
+SUSPENDED:-The application is temporarily paused and can be resumed later.
+REDOPLOYING:-The application is currently being updated with new code and is not fully available while the deployment process in ongoing.
 
-*Domain 
-*Modules
-*Docs
-*Bin
-*Appclient
+ACCESSING DEPLOYMENT CONSOLE:
+===========================
 
+Wildfly management console
 
-HOW CAN WE START:
-================
-To start the jboss go the homefolder of the wildfly then bin folder standalone (windows batch file ) it will get start 
+you can view the status of deployed artifacts through the wildfly admin console which provides a list of deployment with their current state.
+CLI (command line interface) 
+using the wildfly command line interface you can query the status of deployment with management commands.
+Indicating whether the application is currently running nor deployed encountered an error during deployment intentionally deactivated, temporarily paused or is the process of being re-deployed with updates.
 
-*HOW TO CREATE MANAGEMENT CONSOLE USER:
--=====================================
-<Home folder of wildfly>-->bin
-file name : add -user (windows batch file)
-once you run the add user it will asking the what type of user do you want
-a) management user (mgmt-users.properties)
-b)application user(application-users.properties)
-a)type a and click on enter
-after it will ask us a username after giving username and after it will ask us password and re enter the password
+DOMAIN CONTROLLER AND HOST CONTROLLER INJOBSS IN WILDFLY:
+========================================================
 
-HOW TO ACCESS THE ADMIN CONXSOLE:
-================================
+   In jboss wildfly a "domain controller" is the central management point for a group of servers within a domain, responsible for maintaining the overall configuration and policy, while a "host controller" is a separate process running on each server within the domain communicating with the domain controller to manage the individual server instancaes on that host controllers execute those configuration on their respective servers.
 
-Admin/management console :<9990>
-username and password
-*one of the folder in folder structure is standlone where we can store in the configuration and deployment folder and logs.
-*configuration: where we will be having configurations of applications users specifies
-ex:mgmt-users.properties & mgmt-groups.properties
-logs:standalone--log-->logs of the wildfly
-Deployments: A deployment represents anything that can be deployed (ex: an application such as RAR or JBoss-specific deployment) into a server.
-*you can use drag and drop to add new content or replace existing deployments simply drag one or several files onto the deployment with the same name, the deployment will be replaced, otherwise the deployment will be replaced, otherwise the deployment will be added. The deployments added by drag and drop will be enabled by default.
-*left side when we can click on the plus symbol upload deployment.
-HOW TO DEPLOY THE APPLICATION FOR ARTIFACTS TO THE WILDFLY:
-1) Copying the war file and pushing deployment folder of wildfly (home of wildfly--<standalone-->deployments)
-2.cp<artifact source path >< destination of deployment of wildfly>
-3.JBoss wildfly GUI-->upload-artrifact
+KEY POINTS ABOUT DOMAIN AND HOST CONTROLLERS DOMAIN CONTROLLER:=
+================================================================
+DOMAIN CONTROLLER:
+=================
+
+1.Acts as the central management point for the entire domain
+2.stores the domain wide configuration in a file called "domain.xml"
+(Home folder-->Domain--configuration--domain-domain.xml)
+3.Resposible for distributing configuration changes to all host controllers within the domain.
+
+HOST CONTROLLER:
+==============
+
+1.Manages the application server instances running on a specific host
+2.Reads its configuration from a "host.xl" file specific to that host
+(Home folder--Domain--configuration--host.xml)
+3.Communicates with the domain controller to receive configuration updates and start/stop server instances.
+"Domain is refers to master or centralized where we can manage other wildfly servers"(host)
